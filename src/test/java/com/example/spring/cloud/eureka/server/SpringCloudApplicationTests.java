@@ -1,4 +1,4 @@
-package com.example.spring.cloud.consul.client;
+package com.example.spring.cloud.eureka.server;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class EurekaServerApplicationTests {
+public class SpringCloudApplicationTests {
 
 	@Test
 	public void contextLoads() {
