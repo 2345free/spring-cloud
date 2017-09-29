@@ -6,17 +6,25 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>eureka-client</artifactId>
+    <artifactId>eureka-consumer-ribbon-hystrix</artifactId>
     <packaging>war</packaging>
-    <name>eureka-client Maven Webapp</name>
+    <name>eureka-consumer-ribbon-hystrix Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
     </dependencies>
     <build>
-        <finalName>eureka-client</finalName>
+        <finalName>eureka-consumer-ribbon-hystrix</finalName>
     </build>
 </project>
