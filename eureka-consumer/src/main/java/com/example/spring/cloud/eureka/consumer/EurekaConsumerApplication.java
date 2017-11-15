@@ -14,13 +14,13 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class EurekaConsumerApplication {
 
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(EurekaConsumerApplication.class).web(true).run(args);
+    }
+
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();
-    }
-
-    public static void main(String[] args) {
-        new SpringApplicationBuilder(EurekaConsumerApplication.class).web(true).run(args);
     }
 
 }

@@ -12,14 +12,14 @@ import org.springframework.web.client.RestTemplate;
 @SpringCloudApplication
 public class EurekaConsumerRibbonHystrixApplication {
 
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(EurekaConsumerRibbonHystrixApplication.class).web(true).run(args);
+    }
+
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
-    }
-
-    public static void main(String[] args) {
-        new SpringApplicationBuilder(EurekaConsumerRibbonHystrixApplication.class).web(true).run(args);
     }
 
 }

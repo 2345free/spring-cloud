@@ -15,14 +15,14 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class EurekaConsumerRibbonApplication {
 
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(EurekaConsumerRibbonApplication.class).web(true).run(args);
+    }
+
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
-    }
-
-    public static void main(String[] args) {
-        new SpringApplicationBuilder(EurekaConsumerRibbonApplication.class).web(true).run(args);
     }
 
 }
