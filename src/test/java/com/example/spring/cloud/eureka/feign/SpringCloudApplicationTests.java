@@ -1,4 +1,4 @@
-package com.example.spring.cloud.eureka.server;
+package com.example.spring.cloud.eureka.feign;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

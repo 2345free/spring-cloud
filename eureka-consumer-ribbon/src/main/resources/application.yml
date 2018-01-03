@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8764
+spring:
+  application:
+    name: service-ribbon
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+          # 解决首次请求失败的问题,默认超时是1s
+            timeoutInMilliseconds: 5000

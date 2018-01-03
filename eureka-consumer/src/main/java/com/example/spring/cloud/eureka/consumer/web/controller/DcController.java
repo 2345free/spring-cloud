@@ -12,14 +12,16 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 public class DcController {
+
     @Autowired
     LoadBalancerClient loadBalancerClient;
+
     @Autowired
     RestTemplate restTemplate;
 
     @GetMapping("/consumer")
     public String dc() {
-        ServiceInstance serviceInstance = loadBalancerClient.choose("eureka-client");
+        ServiceInstance serviceInstance = loadBalancerClient.choose("eureka-service1");
         String url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/dc";
         System.out.println(url);
         return restTemplate.getForObject(url, String.class);

@@ -1,9 +1,9 @@
-package com.example.spring.cloud.eureka.ribbon.web.controller;
+package com.example.spring.cloud.eureka.feign.controller;
 
+import com.example.spring.cloud.eureka.feign.service.ConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * Created by luoxx on 2017/9/16.
@@ -12,10 +12,10 @@ import org.springframework.web.client.RestTemplate;
 public class DcController {
 
     @Autowired
-    RestTemplate restTemplate;
+    ConsumerService consumerService;
 
     @GetMapping("/consumer")
     public String dc() {
-        return restTemplate.getForObject("http://eureka-service1/dc", String.class);
+        return consumerService.consumer();
     }
 }

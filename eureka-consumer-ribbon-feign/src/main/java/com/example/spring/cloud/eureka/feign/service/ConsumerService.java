@@ -8,7 +8,11 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.example.spring.cloud.eureka.ribbon.hystrix.service;
+package com.example.spring.cloud.eureka.feign.service;
+
+import com.example.spring.cloud.eureka.feign.service.impl.ConsumerServiceImpl;
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * 〈一句话功能简述〉<br>
@@ -18,8 +22,10 @@ package com.example.spring.cloud.eureka.ribbon.hystrix.service;
  * @create 2017/9/29
  * @since 1.0.0
  */
+@FeignClient(value = "eureka-service1", fallback = ConsumerServiceImpl.class)
 public interface ConsumerService {
 
+    @GetMapping("/dc")
     String consumer();
 
 }

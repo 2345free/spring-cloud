@@ -1,4 +1,4 @@
-package com.example.spring.cloud.eureka.server;
+package com.example.spring.cloud.eureka.feign;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

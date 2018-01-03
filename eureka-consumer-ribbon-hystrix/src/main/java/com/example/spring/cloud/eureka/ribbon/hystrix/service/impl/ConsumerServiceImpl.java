@@ -33,10 +33,9 @@ public class ConsumerServiceImpl implements ConsumerService {
     @Override
     @HystrixCommand(fallbackMethod = "fallback")
     public String consumer() {
-        return restTemplate.getForObject("http://eureka-client/dc", String.class);
+        return restTemplate.getForObject("http://eureka-service1/dc", String.class);
     }
 
-    @Override
     public String fallback() {
         return "fallback";
     }
