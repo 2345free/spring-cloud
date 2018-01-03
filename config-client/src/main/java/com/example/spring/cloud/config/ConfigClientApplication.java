@@ -13,6 +13,7 @@ package com.example.spring.cloud.config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @create 2017/9/28
  * @since 1.0.0
  */
+@EnableEurekaClient
 @RestController
 @SpringBootApplication
 public class ConfigClientApplication {

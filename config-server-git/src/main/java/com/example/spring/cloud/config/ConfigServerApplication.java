@@ -13,6 +13,7 @@ package com.example.spring.cloud.config;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * 〈一句话功能简述〉<br>
@@ -28,6 +29,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * @create 2017/9/28
  * @since 1.0.0
  */
+@EnableEurekaClient
 @EnableConfigServer
 @SpringBootApplication
 public class ConfigServerApplication {

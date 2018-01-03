@@ -3,8 +3,23 @@ spring:
     name: config-client
   cloud:
     config:
-      uri: http://localhost:1201/
+#      uri: http://localhost:1201/
       profile: dev
       label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+  rabbitmq:
+    host: 172.16.13.26
+    port: 5672
+    username: admin
+    password: admin
 server:
   port: 2001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  security:
+    enabled: false
