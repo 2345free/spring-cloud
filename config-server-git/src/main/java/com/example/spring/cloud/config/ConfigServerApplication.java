@@ -16,7 +16,13 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * 〈一句话功能简述〉<br>
- * 〈〉
+ * http请求地址和资源文件映射如下:
+ * <p>
+ * /{application}/{profile}[/{label}]
+ * /{application}-{profile}.yml
+ * /{label}/{application}-{profile}.yml
+ * /{application}-{profile}.properties
+ * /{label}/{application}-{profile}.properties
  *
  * @author tianyi
  * @create 2017/9/28

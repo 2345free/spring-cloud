@@ -5,8 +5,8 @@ spring:
     config:
       server:
         git:
-          uri: http://git.oschina.net/didispace/config-repo-demo/
-          search-paths: repo
+          uri: https://github.com/forezp/SpringcloudConfig/
+          search-paths: respo
 #          username:
 #          password:
 server:

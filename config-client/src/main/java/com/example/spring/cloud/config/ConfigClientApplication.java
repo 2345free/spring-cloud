@@ -10,22 +10,39 @@
  */
 package com.example.spring.cloud.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 〈一句话功能简述〉<br>
- * 〈〉
+ * spring.cloud.config.label 指明远程仓库的分支
+ * spring.cloud.config.profile
+ * <p>
+ * dev开发环境配置文件
+ * test测试环境
+ * pro正式环境
  *
  * @author tianyi
  * @create 2017/9/28
  * @since 1.0.0
  */
+@RestController
 @SpringBootApplication
 public class ConfigClientApplication {
 
     public static void main(String[] args) {
         new SpringApplicationBuilder(ConfigClientApplication.class).web(true).run(args);
+    }
+
+    @Value("${foo}")
+    private String foo;
+
+    @GetMapping(value = "/hi")
+    public String hi() {
+        return foo;
     }
 
 }
