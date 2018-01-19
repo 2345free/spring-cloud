@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 
-@Slf4j
+@Slf4j(topic = "api-gateway")
 @Component
 public class MyFilter extends ZuulFilter {
 
@@ -44,6 +44,7 @@ public class MyFilter extends ZuulFilter {
         Object accessToken = request.getParameter("token");
         if (accessToken == null) {
             log.warn("token is empty");
+            log.debug("you kan see this,because the logger's debug level is enable");
             ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(401);
             try {

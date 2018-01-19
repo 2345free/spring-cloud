@@ -15,3 +15,5 @@ zuul:
     service2:
       path: /api/feign/**
       serviceId: eureka-service-feign
+logging:
+  path: d:/work/logs
