@@ -1,0 +1,8 @@
+
+apply plugin: 'war'
+
+description = 'consul-client Maven Webapp'
+dependencies {
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul-discovery', version:'1.2.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'1.5.7.RELEASE'
+}
