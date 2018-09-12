@@ -8,16 +8,19 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+
 /**
- * Created by luoxx on 2017/9/16.
+ * 网关
+ *
+ * @author luoxiaoxiao
  */
 @EnableZuulProxy
 @EnableDiscoveryClient
 @SpringCloudApplication
-public class EurekaConsumerRibbonZuulApplication {
+public class EurekaConsumerZuulApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(EurekaConsumerRibbonZuulApplication.class).web(true).run(args);
+        new SpringApplicationBuilder(EurekaConsumerZuulApplication.class).web(true).run(args);
     }
 
     @Bean
