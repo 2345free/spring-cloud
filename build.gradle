@@ -1,12 +1,6 @@
-buildscript {
-    repositories {
-        mavenLocal()
-        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
-    }
-    dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
-        classpath "io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE"
-    }
+plugins {
+    id 'org.springframework.boot' version '2.0.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.6.RELEASE'
 }
 
 allprojects  {
@@ -42,12 +36,13 @@ subprojects {
     }
 
     dependencies {
-          compile 'org.springframework.boot:spring-boot-configuration-processor'
-          providedCompile 'org.projectlombok:lombok:1.18.2'
-          compile 'org.springframework.boot:spring-boot-starter-actuator'
-          testCompile('org.springframework.boot:spring-boot-starter-test') {
-              exclude(module: 'commons-logging')
-          }
+        compile 'org.springframework.boot:spring-boot-configuration-processor'
+        annotationProcessor 'org.projectlombok:lombok:1.18.2'
+        compileOnly 'org.projectlombok:lombok:1.18.2'
+        compile 'org.springframework.boot:spring-boot-starter-actuator'
+        testCompile('org.springframework.boot:spring-boot-starter-test') {
+            exclude(module: 'commons-logging')
+        }
     }
 
   
