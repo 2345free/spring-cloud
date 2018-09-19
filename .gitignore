@@ -83,3 +83,6 @@ local.properties
 
 .idea/
 .gradle/
+out/
+build/
+*.iml
