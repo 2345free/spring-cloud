@@ -24,6 +24,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ConsumerServiceImpl implements ConsumerService {
 
+    @Override
     public String consumer() {
         return "feign's fallback";
     }

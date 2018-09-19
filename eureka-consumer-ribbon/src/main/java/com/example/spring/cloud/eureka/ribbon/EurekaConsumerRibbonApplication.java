@@ -20,7 +20,8 @@ public class EurekaConsumerRibbonApplication {
     }
 
     @Bean
-    @LoadBalanced // 开启负载均衡
+    // 开启负载均衡
+    @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
