@@ -9,14 +9,3 @@ include ':config-server-git'
 include ':config-client'
 include ':eureka-consumer-feign'
 include ':eureka-consumer-zuul'
-
-project(':eureka-server').projectDir = "$rootDir/eureka-server" as File
-project(':eureka-client').projectDir = "$rootDir/eureka-client" as File
-project(':consul-client').projectDir = "$rootDir/consul-client" as File
-project(':eureka-consumer').projectDir = "$rootDir/eureka-consumer" as File
-project(':eureka-consumer-ribbon').projectDir = "$rootDir/eureka-consumer-ribbon" as File
-project(':eureka-consumer-ribbon-hystrix').projectDir = "$rootDir/eureka-consumer-ribbon-hystrix" as File
-project(':config-server-git').projectDir = "$rootDir/config-server-git" as File
-project(':config-client').projectDir = "$rootDir/config-client" as File
-project(':eureka-consumer-feign').projectDir = "$rootDir/eureka-consumer-feign" as File
-project(':eureka-consumer-zuul').projectDir = "$rootDir/eureka-consumer-zuul" as File
