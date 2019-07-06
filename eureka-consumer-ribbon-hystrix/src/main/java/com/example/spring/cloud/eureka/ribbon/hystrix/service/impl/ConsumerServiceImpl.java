@@ -12,7 +12,7 @@ package com.example.spring.cloud.eureka.ribbon.hystrix.service.impl;
 
 import com.example.spring.cloud.eureka.ribbon.hystrix.service.ConsumerService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -25,10 +25,10 @@ import org.springframework.web.client.RestTemplate;
  * @since 1.0.0
  */
 @Service
+@RequiredArgsConstructor
 public class ConsumerServiceImpl implements ConsumerService {
 
-    @Autowired
-    RestTemplate restTemplate;
+    private final RestTemplate restTemplate;
 
     @Override
     @HystrixCommand(fallbackMethod = "fallback")

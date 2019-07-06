@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 public class EurekaConsumerApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(EurekaConsumerApplication.class).web(true).run(args);
+        new SpringApplicationBuilder(EurekaConsumerApplication.class).run(args);
     }
 
     @Bean

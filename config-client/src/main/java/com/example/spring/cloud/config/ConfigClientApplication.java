@@ -36,15 +36,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConfigClientApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(ConfigClientApplication.class).web(true).run(args);
+        new SpringApplicationBuilder(ConfigClientApplication.class).run(args);
     }
 
-    @Value("${foo}")
-    private String foo;
+    @Value("${itzone123.api.version}")
+    private String apiVersion;
 
     @GetMapping(value = "/hi")
     public String hi() {
-        return foo;
+        return apiVersion;
     }
 
 }

@@ -19,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
 public class EurekaConsumerRibbonHystrixApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(EurekaConsumerRibbonHystrixApplication.class).web(true).run(args);
+        new SpringApplicationBuilder(EurekaConsumerRibbonHystrixApplication.class).run(args);
     }
 
     @Bean

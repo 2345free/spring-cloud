@@ -11,10 +11,8 @@
 package com.example.spring.cloud.eureka.feign.service;
 
 import com.example.spring.cloud.eureka.feign.service.impl.ConsumerServiceImpl;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * 〈一句话功能简述〉<br>
@@ -32,7 +30,7 @@ public interface ConsumerService {
      *
      * @return
      */
-    @RequestMapping(value = "/dc", method = RequestMethod.GET)
+    @GetMapping(value = "/dc")
     String consumer();
 
 }

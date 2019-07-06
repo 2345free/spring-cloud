@@ -3,17 +3,18 @@ spring:
     name: config-client
   cloud:
     config:
-#      uri: http://localhost:1201/
+      uri: http://localhost:1201/
       profile: dev
       label: master
       discovery:
         enabled: true
         service-id: config-server
   rabbitmq:
-    host: 172.16.13.26
+    host: 192.168.3.32
     port: 5672
     username: admin
     password: admin
+    virtual-host: /
 server:
   port: 2001
 eureka:

@@ -1,6 +1,6 @@
 package com.example.spring.cloud.eureka.client.web.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,10 +13,10 @@ import java.net.UnknownHostException;
  * Created by luoxx on 2017/9/16.
  */
 @RestController
+@RequiredArgsConstructor
 public class DcController {
 
-    @Autowired
-    DiscoveryClient discoveryClient;
+    private final DiscoveryClient discoveryClient;
 
     @Value("${server.port}")
     private String port;

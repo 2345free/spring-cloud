@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '1.5.3.RELEASE'
+    id 'org.springframework.boot' version '2.0.9.RELEASE'
 }
 
 allprojects {
@@ -28,7 +28,6 @@ subprojects {
         options.encoding = 'UTF-8'
     }
 
-
     repositories {
         mavenLocal()
         maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
@@ -43,6 +42,4 @@ subprojects {
             exclude(module: 'commons-logging')
         }
     }
-
-
 }

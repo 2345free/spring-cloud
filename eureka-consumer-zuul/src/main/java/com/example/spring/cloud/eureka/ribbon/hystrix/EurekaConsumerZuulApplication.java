@@ -20,7 +20,7 @@ import org.springframework.web.client.RestTemplate;
 public class EurekaConsumerZuulApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(EurekaConsumerZuulApplication.class).web(true).run(args);
+        new SpringApplicationBuilder(EurekaConsumerZuulApplication.class).run(args);
     }
 
     @Bean
