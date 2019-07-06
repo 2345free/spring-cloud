@@ -1,13 +1,11 @@
 plugins {
-    id 'org.springframework.boot' version '2.0.9.RELEASE'
+    id 'org.springframework.boot' version '2.0.9.RELEASE' apply false
 }
 
 allprojects {
     apply plugin: 'maven'
     apply plugin: 'idea'
-
-    group = 'com.example'
-    version = '0.0.1-SNAPSHOT'
+    apply plugin: 'eclipse'
 }
 
 subprojects {
@@ -34,9 +32,9 @@ subprojects {
     }
 
     dependencies {
-        compile 'org.springframework.boot:spring-boot-configuration-processor'
-        annotationProcessor 'org.projectlombok:lombok:1.18.2'
         compileOnly 'org.projectlombok:lombok:1.18.2'
+        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+        annotationProcessor 'org.projectlombok:lombok:1.18.2'
         compile 'org.springframework.boot:spring-boot-starter-actuator'
         testCompile('org.springframework.boot:spring-boot-starter-test') {
             exclude(module: 'commons-logging')
