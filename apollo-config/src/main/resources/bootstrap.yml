@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: apollo-config
+  profiles:
+    active: none
+
+apollo:
+  bootstrap:
+    enabled: true
+    namespaces: application
+    eagerLoad:
+      enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

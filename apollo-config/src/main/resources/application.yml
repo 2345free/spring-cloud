@@ -1,0 +1,5 @@
+server:
+  port: 8811
+logging:
+  level:
+    com.ctrip.framework.apollo: debug
