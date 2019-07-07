@@ -1,3 +1,11 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        gradlePluginPortal()
+    }
+}
+
 rootProject.name = 'spring-cloud'
 include ':eureka-server'
 include ':eureka-client'

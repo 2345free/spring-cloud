@@ -1,19 +1,14 @@
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
 server:
   port: 8769
-spring:
-  application:
-    name: service-zuul
+
 zuul:
   routes:
-    service1:
-      path: /api/hystrix/**
-      serviceId: eureka-service-hystrix
-    service2:
-      path: /api/feign/**
-      serviceId: eureka-service-feign
+    apollo-config:
+      path: /apollo-config/**
+      serviceId: apollo-config
+    stream-rabbitmq:
+      path: /stream-rabbitmq/**
+      serviceId: stream-rabbitmq
+
 logging:
-  path: d:/work/logs
+  path: logs

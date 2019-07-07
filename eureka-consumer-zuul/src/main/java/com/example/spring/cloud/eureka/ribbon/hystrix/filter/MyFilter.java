@@ -41,6 +41,12 @@ public class MyFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         log.info(String.format("%s >>> %s", request.getMethod(), request.getRequestURL().toString()));
+
+        // 放行swagger请求
+        if (request.getRequestURI().contains("/v2/api-docs")) {
+            return null;
+        }
+
         Object accessToken = request.getParameter("token");
         if (accessToken == null) {
             log.warn("token is empty");
