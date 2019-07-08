@@ -24,6 +24,7 @@ public class Swagger2Config {
     public SwaggerResourcesProvider swaggerResourcesProvider() {
         return () -> {
             List<SwaggerResource> resources = new ArrayList<>();
+            resources.add(createResource("default", "/v2/api-docs", "2.0"));
             properties.getRoutes().values()
                     .forEach(route -> resources
                             .add(createResource(route.getServiceId(), route.getServiceId(), "2.0")));
